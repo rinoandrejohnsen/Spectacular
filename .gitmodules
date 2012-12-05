@@ -1,0 +1,18 @@
+[submodule "library/wire"]
+	path = library/wire
+	url = https://github.com/cujojs/wire.git
+[submodule "library/cola"]
+	path = library/cola
+	url = https://github.com/cujojs/cola.git
+[submodule "library/curl"]
+	path = library/curl
+	url = https://github.com/cujojs/curl.git
+[submodule "library/meld"]
+	path = library/meld
+	url = https://github.com/cujojs/meld.git
+[submodule "library/poly"]
+	path = library/poly
+	url = https://github.com/cujojs/poly.git
+[submodule "library/when"]
+	path = library/when
+	url = https://github.com/cujojs/when.git
