@@ -9,8 +9,9 @@ define(function() {
         postFeedItems = postFeedService.getPostFeedItems();
         
         this.addItem = function(item) {
-            //postFeedItems.add(item);
-            alert(item);
+            if (item !== '') {
+                alert(item);    
+            };
         };
     }
 
