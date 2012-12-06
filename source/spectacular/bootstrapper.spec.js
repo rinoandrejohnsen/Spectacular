@@ -32,12 +32,21 @@ define({
             }
         }
     },
-    moduleB: {
+    facebookModule: {
         wire: {
-            spec: 'source/modules/moduleB/moduleB.spec',
+            spec: 'source/modules/facebookModule/facebookModule.spec',
             provide: {
                 node: {$ref: 'asideRegion'},
-                service: {$ref: 'postFeedService'}
+                postFeedService: {$ref: 'postFeedService'}
+            }
+        }
+    },
+    twitterModule: {
+        wire: {
+            spec: 'source/modules/twitterModule/twitterModule.spec',
+            provide: {
+                node: {$ref: 'asideRegion'},
+                postFeedService: {$ref: 'postFeedService'}
             }
         }
     },

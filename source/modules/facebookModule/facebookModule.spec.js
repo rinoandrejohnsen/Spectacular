@@ -1,6 +1,14 @@
 define({
-    moduleBView: {
-        create: {module: 'source/modules/moduleB/views/moduleBView', args: [{$ref: 'service'}]}
+    facebookView: {
+        create: {
+            module: 'source/modules/facebookModule/views/facebookView', 
+            args: [
+                {$ref: 'asideRegion'}
+            ]
+        },
+        init: {
+            render: ''
+        }
     },
     plugins: [
         {module: 'cola'},
