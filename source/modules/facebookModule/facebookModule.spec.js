@@ -3,7 +3,8 @@ define({
         create: {
             module: 'source/modules/facebookModule/views/facebookView', 
             args: [
-                {$ref: 'asideRegion'}
+                {$ref: 'asideRegion'},
+                {$ref: 'postFeedService'}
             ]
         },
         init: {

@@ -2,10 +2,14 @@ define(['source/common/infrastructure/view'], function(View) {
     
     var facebookContainer = null;
     
-    var FacebookView = function(container) {
+    var FacebookView = function(container, postFeedService) {
         View.call(this);
         
         var that = this;
+        
+        var rino = postFeedService.getPostFeedItems();
+        
+        //rino.add("Rino");
         
         facebookContainer = container;
         

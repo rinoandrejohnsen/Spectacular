@@ -1,14 +1,24 @@
-define(function() {
+define(['source/common/infrastructure/observableCollection'], function(ObservableCollection) {
     
-    var ModuleAService = function() {
-        this.getModel = function() {
-            return 'model';
+    var postFeedItems = null;
+    
+    var postFeedService = function() {
+        
+        postFeedItems = new ObservableCollection();
+        
+        this.getPostFeedItems = function() {
+            return postFeedItems;
+        };
+    
+        this.addPostFeedItem = function(item) {
+            // @TODO: Add check for basemodel inheritence 
+            postFeedItems.add(item);
         };
     };
 
-    ModuleAService.prototype = {
-        constructor: ModuleAService
+    postFeedService.prototype = {
+        constructor: postFeedService
     };
 
-    return ModuleAService;
+    return postFeedService;
 });
