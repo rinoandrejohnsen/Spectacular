@@ -1,7 +1,6 @@
 define(function() {
     
     var ModuleAService = function() {
-        debugger;
         this.getModel = function() {
             return 'model';
         };

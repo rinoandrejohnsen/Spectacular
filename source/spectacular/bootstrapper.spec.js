@@ -1,8 +1,8 @@
 define({
     theme: {module: 'css!source/spectacular/resources/styles/theme.css'},
-    shell: {
+    headerRegion: {
         render: {
-            template: {module: 'text!source/spectacular/resources/templates/shellTemplate.html'},
+            template: {module: 'text!source/spectacular/resources/templates/headerRegionTemplate.html'},
             replace: {module: 'i18n!source/common/infrastructure/constants'},
             css: {module: 'css!source/spectacular/resources/styles/shellStyle.css'}
         },
@@ -12,7 +12,7 @@ define({
         render: {
             template: {module: 'text!source/spectacular/resources/templates/mainRegionTemplate.html'}
         },
-        insert: {after: 'shell'}
+        insert: {after: 'headerRegion'}
     },
     asideRegion: {
         render: {
@@ -20,14 +20,15 @@ define({
         },
         insert: {after: 'mainRegion'}
     },
-    service: {
-        $ref: 'moduleA.moduleAService'
+    postFeedService: {
+        $ref: 'postFeedModule.postFeedService'
     },
-    moduleA: {
+    postFeedModule: {
         wire: {
-            spec: 'source/modules/moduleA/moduleA.spec',
+            spec: 'source/modules/postFeedModule/postFeedModule.spec',
             provide: {
-                node: {$ref: 'mainRegion'}
+                mainRegion: {$ref: 'mainRegion'},
+                asideRegion: {$ref: 'asideRegion'}
             }
         }
     },
@@ -36,7 +37,7 @@ define({
             spec: 'source/modules/moduleB/moduleB.spec',
             provide: {
                 node: {$ref: 'asideRegion'},
-                service: {$ref: 'service'}
+                service: {$ref: 'postFeedService'}
             }
         }
     },
