@@ -18,10 +18,9 @@ define(['source/common/infrastructure/view'], function(View) {
         this.setContainer(twitterContainer);
         this.setTemplate(template());
         
+        // Overriding the base implementation
         this.render = function() {
-            var oldTemplate = that.getContainer().innerHTML;
-            var newTemplate= oldTemplate += that.getTemplate();
-            that.getContainer().innerHTML = newTemplate;
+            that.getContainer().innerHTML += that.getTemplate();
         };
     };
 
