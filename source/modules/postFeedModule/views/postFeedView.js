@@ -1,20 +1,36 @@
 define(['source/common/infrastructure/view'], function(View) {
-    
-    var postFeedContainer = null;
-    
-    var PostFeedView = function(container) {
+
+    var PostFeedView = function(postFeedContainer) {
         View.call(this);
-        
+
+        var postFeedCollection = null;
+
         var that = this;
-        
-        postFeedContainer = container;
-        
+
         var template = function() {
-            var theList = '<div id="the-list"><h2></h2><table class="list-view"><thead></thead><tbody></tbody></table></div>';
-            
+            var theList = '';
+            debugger;
+            if (that.getCollection() !== null) {
+                for (var i = 0; i < that.getCollection().get().length; i++) {
+                    theList += '<div class="post" style=background-color:' + that.getCollection().get()[i].type.color + ';"><h1>' + that.getCollection().get()[i].text + '</h1></div>';
+                }
+            }
+
             return theList;
         };
         
+        this.getTemplate = function() {
+            return template();
+        };
+        
+        this.getCollection = function() {
+            return postFeedCollection;
+        };
+
+        this.setCollection = function(collection) {
+            postFeedCollection = collection;
+        };
+
         this.setContainer(postFeedContainer);
         this.setTemplate(template());
     };

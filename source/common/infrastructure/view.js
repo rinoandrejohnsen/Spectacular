@@ -1,9 +1,10 @@
 define(function() {
     
-    var viewTemplate = "";
-    var viewContainer = "";
+    
     
     var View = function() {
+        var viewTemplate = "";
+        var viewContainer = "";
         
         this.getTemplate = function () {
             return viewTemplate;
@@ -25,9 +26,9 @@ define(function() {
             this.getContainer().innerHTML = this.getTemplate();
         };
     };
-
+    
     View.prototype = {
-        constructor: View
+        constructor: View    
     };
 
     return View;

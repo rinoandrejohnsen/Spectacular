@@ -55,3 +55,11 @@ body footer {
 body .module {
     padding: 5px;
 }
+
+.post {
+    width: 90%;
+    height: 170px;
+    background-color: wheat;
+    margin-right: auto;
+    margin-left: auto;
+}

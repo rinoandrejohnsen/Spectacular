@@ -12,8 +12,9 @@ define(function() {
         });
         
         this.collectionChangedHandler = function() {
+            view.setCollection(postFeedItems);
             view.render();
-            alert("Rino");
+            //alert("Rino");
         };
     }
 

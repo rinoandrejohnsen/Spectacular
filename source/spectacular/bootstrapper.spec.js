@@ -50,6 +50,14 @@ define({
             }
         }
     },
+    tickerModule: {
+        wire: {
+            spec: 'source/modules/tickerModule/tickerModule.spec',
+            provide: {
+                postFeedService: {$ref: 'postFeedService'}
+            }
+        }
+    },
     plugins: [
         {module: 'cola'},
         {module: 'wire/aop'},

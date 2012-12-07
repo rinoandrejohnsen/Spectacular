@@ -25,7 +25,7 @@ define({
         create: {
             module: 'source/modules/postFeedModule/controllers/postFeedController',
             args: [
-                {$ref: 'postFormListView'},
+                {$ref: 'postFeedView'},
                 {$ref: 'postFeedService'}
             ]
         }

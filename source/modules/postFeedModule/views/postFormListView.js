@@ -1,13 +1,9 @@
 define(['source/common/infrastructure/view'], function(View) {
     
-    var postFormListContainer = null;
-    
-    var PostFormListView = function(container) {
+    var PostFormListView = function(postFormListContainer) {
         View.call(this);
         
         var that = this;
-        
-        postFormListContainer = container;
         
         var template = function() {
             var theList = '<div id="the-list"><h2></h2><table class="list-view"><thead></thead><tbody></tbody></table></div>';

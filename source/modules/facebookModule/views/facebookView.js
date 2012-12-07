@@ -1,17 +1,13 @@
 define(['source/common/infrastructure/view'], function(View) {
     
-    var facebookContainer = null;
-    
-    var FacebookView = function(container, postFeedService) {
+    var FacebookView = function(facebookContainer, postFeedService) {
         View.call(this);
-        
-        var that = this;
         
         var rino = postFeedService.getPostFeedItems();
         
         //rino.add("Rino");
         
-        facebookContainer = container;
+        var that = this;
         
         var template = function() {
             var theList = '<div style="margin-left: auto; margin-right: auto; margin-top: 20px;"><p style="text-align: left; margin-left: 15px; color: #787878;">Facebook</p><div style="width: 85%; height:100%; margin-left: auto; margin-right: auto; background-color: #5771a3; box-shadow: 0px 0px 10px; padding: 6px;"><textarea id="facebookPost" rows="4" style="display: block; width: 100%; height: 100%; padding: 0; resize: none;"></textarea><label class="facebooklabel" style="font-size: 11px; font-family: tahoma,verdana,arial,sans-serif;font-weight: bold;color:white;padding: 5px;margin-top: 13px;margin-right: -6px;box-shadow: 0px 0px 5px black;float:right;background-color: #5771a3;">Post</label></div></div>';
