@@ -18,7 +18,7 @@ define(function() {
                 if (i < dataItems.array.length) {            
                     that.tickerStart();    
                 }
-            }, 3000);
+            }, Math.floor(Math.random()*10001));
         };
     };
 

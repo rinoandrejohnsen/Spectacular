@@ -10,7 +10,16 @@ define(function() {
         
         this.addItem = function(item) {
             if (item !== '') {
-                alert(item);    
+               var model = {
+                    id: 1,
+                    type: {
+                        id: "(Spec)tacular user",
+                        icon: "source/modules/facebookModule/resources/icons/facebook.jpg",
+                        color: "#3b5b96"
+                    },
+                    text: item
+                };
+                postFeedItems.add(model);
             };
         };
     }

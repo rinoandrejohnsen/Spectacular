@@ -1,7 +1,5 @@
 define(function() {
     
-    
-    
     var View = function() {
         var viewTemplate = "";
         var viewContainer = "";
