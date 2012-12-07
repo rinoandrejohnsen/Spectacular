@@ -6,7 +6,7 @@ define(['source/common/infrastructure/view'], function(View) {
         var that = this;
         
         var template = function() {
-            var theList = '<div id="the-list"><h2></h2><table class="list-view"><thead></thead><tbody></tbody></table></div>';
+            var theList = '<div class="aside-tool"><table class="list-view"><tr><td><div class="load-module" style="color: #787878; cursor: pointer;">Load Path Module</div></td></tr></table></div>';
             
             return theList;
         };

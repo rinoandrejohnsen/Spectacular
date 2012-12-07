@@ -91,3 +91,11 @@ body .module {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+.aside-tool {
+    background-color: #464646;
+    height: 50px;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}

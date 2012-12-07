@@ -28,7 +28,8 @@ define({
             spec: 'source/modules/postFeedModule/postFeedModule.spec',
             provide: {
                 mainRegion: {$ref: 'mainRegion'},
-                asideRegion: {$ref: 'asideRegion'}
+                asideRegion: {$ref: 'asideRegion'},
+                pathModule: {$ref: 'pathModule'}
             }
         }
     },
@@ -44,6 +45,16 @@ define({
     twitterModule: {
         wire: {
             spec: 'source/modules/twitterModule/twitterModule.spec',
+            provide: {
+                node: {$ref: 'asideRegion'},
+                postFeedService: {$ref: 'postFeedService'}
+            }
+        }
+    },
+    pathModule: {
+        wire: {
+            spec: 'source/modules/pathModule/pathModule.spec',
+            defer: true,
             provide: {
                 node: {$ref: 'asideRegion'},
                 postFeedService: {$ref: 'postFeedService'}

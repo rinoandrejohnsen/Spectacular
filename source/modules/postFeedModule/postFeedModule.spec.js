@@ -1,4 +1,7 @@
 define({
+    loadModule: {
+        $ref: 'asideRegion'
+    },
     postFeedView: {
         create: {
             module: 'source/modules/postFeedModule/views/postFeedView',
@@ -28,6 +31,19 @@ define({
                 {$ref: 'postFeedView'},
                 {$ref: 'postFeedService'}
             ]
+        }
+    },
+    postFormController: {
+        create: {
+            module: 'source/modules/postFeedModule/controllers/postFormController'
+        },
+        properties: {
+            pathModule: {$ref: 'pathModule'}
+        },
+        on: {
+            loadModule: {
+                'click:.load-module': 'loadPathModule'
+            }
         }
     },
     postFeedService: {
