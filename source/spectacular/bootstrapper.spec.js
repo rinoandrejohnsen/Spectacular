@@ -1,4 +1,26 @@
 define({
+    postListView: {
+        create: {
+            module: 'source/spectacular/postListView',
+            args: [
+                {el: {$ref: 'headerRegion'}},
+                {collection: {$ref: 'postCollection'}}
+            ]
+        }
+    },
+    postCollection: {
+        create: {
+            module: 'source/spectacular/postCollection',
+            args: [
+                {$ref: 'postModel'}
+            ]
+        }
+    },
+    postModel: {
+        create: {
+            module: 'source/spectacular/postModel'
+        }
+    },
     theme: {module: 'css!source/spectacular/resources/styles/theme.css'},
     headerRegion: {
         render: {
