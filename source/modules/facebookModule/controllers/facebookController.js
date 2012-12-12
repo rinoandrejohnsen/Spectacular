@@ -1,16 +1,13 @@
 define(function() {
-    
-    var postFeedItems = null;
-    
     function FacebookController(postFeedService) {
-
+        var postFeedItems = null;
         var that = this;
-        
+
         postFeedItems = postFeedService.getPostFeedItems();
-        
+
         this.addItem = function(item) {
             if (item !== '') {
-               var model = {
+                var model = {
                     id: 1,
                     type: {
                         id: "(Spec)tacular user",
@@ -20,9 +17,9 @@ define(function() {
                     text: item
                 };
                 postFeedItems.add(model);
-            };
+            }
         };
-    }
+    };
 
     FacebookController.prototype = {
         constructor: FacebookController

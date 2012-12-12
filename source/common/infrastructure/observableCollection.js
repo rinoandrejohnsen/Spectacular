@@ -1,5 +1,4 @@
 define(['source/common/infrastructure/event'], function(Event) {
-
     function ObservableCollection() {
         var items = [];
 
@@ -12,8 +11,8 @@ define(['source/common/infrastructure/event'], function(Event) {
 
         this.get = function() {
             return [].concat(items);
-        }; 
-        
+        };
+
         this.remove = function(index) {
             var item;
 
@@ -21,7 +20,7 @@ define(['source/common/infrastructure/event'], function(Event) {
             items.splice(index, 1);
             this.collectionChanged.notify({item: item});
         };
-    }
+    };
 
     ObservableCollection.prototype = {
         constructor: ObservableCollection

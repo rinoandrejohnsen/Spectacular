@@ -1,23 +1,18 @@
 define(['source/common/infrastructure/view'], function(View) {
-    
-    var FacebookView = function(facebookContainer, postFeedService) {
+    var FacebookView = function(facebookContainer) {
         View.call(this);
-        
-        var rino = postFeedService.getPostFeedItems();
-        
-        //rino.add("Rino");
-        
+
         var that = this;
-        
+
         var template = function() {
             var theList = '<div style="margin-left: auto; margin-right: auto; margin-top: 20px;"><p style="text-align: left; margin-left: 15px; color: #787878;">Facebook</p><div style="width: 85%; height:100%; margin-left: auto; margin-right: auto; background-color: #3b5b96; box-shadow: 0px 0px 10px; padding: 6px;"><textarea id="facebookPost" rows="4" style="display: block; width: 100%; height: 100%; padding: 0; resize: none;"></textarea><label class="facebooklabel" style="font-size: 11px; font-family: tahoma,verdana,arial,sans-serif;font-weight: bold;color:white;padding: 5px;margin-top: 13px;margin-right: -6px;box-shadow: 0px 0px 5px black;float:right;background-color: #3b5b96;">Post</label></div></div>';
-            
+
             return theList;
         };
-        
+
         this.setContainer(facebookContainer);
         this.setTemplate(template());
-        
+
         // Overriding the base implementation
         this.render = function() {
             that.getContainer().innerHTML += that.getTemplate();

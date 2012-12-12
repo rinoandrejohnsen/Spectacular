@@ -2,9 +2,9 @@
     var config = {
         baseUrl: '',
         locale: '',
-        paths: {    
-            'jquery': 'library/jquery/jquery',
-            'underscore': 'library/underscore/underscore'
+        paths: {
+            jquery: 'library/jquery/jquery',
+            underscore: 'library/underscore/underscore'
         },
         packages: [
             {name: 'backbone', location: 'library/backbone', main: 'backbone'},

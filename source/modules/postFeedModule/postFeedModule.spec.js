@@ -13,7 +13,7 @@ define({
             render: ''
         }
     },
-    postFormListView : {
+    postFormListView: {
         create: {
             module: 'source/modules/postFeedModule/views/postFormListView',
             args: [

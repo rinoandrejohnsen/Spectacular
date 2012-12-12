@@ -14,7 +14,7 @@ define(function() {
                 listeners[index](sender, args);
             }
         };
-    }
+    };
 
     Event.prototype = {
         constructor: Event

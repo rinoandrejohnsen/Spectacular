@@ -1,5 +1,4 @@
 define(['source/common/infrastructure/view'], function(View) {
-
     var PostFeedView = function(postFeedContainer) {
         View.call(this);
 
