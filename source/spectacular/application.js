@@ -1,27 +1,22 @@
-(function(curl) {
-    var config = {
-        baseUrl: '',
-        locale: '',
-        paths: {
-            jquery: 'library/jquery/jquery',
-            underscore: 'library/underscore/underscore'
-        },
-        packages: [
-            {name: 'backbone', location: 'library/backbone', main: 'backbone'},
-            {name: 'cola', location: 'library/cola', main: 'cola'},
-            {name: 'curl', location: 'library/curl/src/curl', main: 'curl'},
-            {name: 'meld', location: 'library/meld', main: 'meld'},
-            {name: 'poly', location: 'library/poly', main: 'poly'},
-            {name: 'when', location: 'library/when', main: 'when'},
-            {name: 'wire', location: 'library/wire', main: 'wire'}
-        ],
-        preloads: ['poly/all']
-    };
+define(["./bootstrapper"],
+    function (BootStrapper) {
 
-    try {
-        curl(config, ['wire!source/spectacular/bootstrapper.spec']);
+        function Application () {
+            var bootStrapper = new BootStrapper();
+            bootStrapper.run();
+        }
+
+        Application.prototype.constructor = Application;
+        Application.prototype.onLaunch = function () {
+            console.log("Launching");
+        };
+        Application.prototype.onSuspend = function () {
+            console.log("Suspending");
+        };
+        Application.prototype.onResume = function () {
+            console.log("Resuming");
+        };
+
+        return Application;
     }
-    catch (error) {
-        console.log("Error wiring the bootstrapper. Message: " + error + ".");
-    }
-})(curl);
+);

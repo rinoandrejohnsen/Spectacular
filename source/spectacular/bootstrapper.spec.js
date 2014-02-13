@@ -81,7 +81,6 @@ define({
             classes: {init: 'loading'}
         },
         {module: 'wire/dom/render'},
-        {module: 'wire/domReady'},
         {module: 'wire/connect'},
         {module: 'wire/on'}
     ]
